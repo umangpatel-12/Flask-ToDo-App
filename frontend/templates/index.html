@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Tutorial</title>
+    <style>
+        .center {
+            text-align: center;
+            margin-top: 20px;
+        }
+        body {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <p class="center">This is a paragraph at the top of the center.</p>
+    <p class="center">Today is a {{ day_of_week }}</p>
+    <p class="center">Today is a {{ current_time }}</p>
+
+    <div class="center">
+        <form action="/submit">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            
+            <label for="password">Enter your password:</label>
+            <input type="password" id="password" name="password">
+            <br>
+           
+            <input type="submit" value="Submit">
+            <br>
+            <a href="get_data"><button>View Data</button></a>
+
+        </form>
+    </div>
+
+</body>
+</html>
