@@ -30,22 +30,7 @@ def submit():
     except requests.exceptions.RequestException as e:
         return jsonify({'error': str(e)}), 500
 
-# @app.route('/get_data')
-# def get_data():
-#     try:
-#         response = requests.get(BACKEND_URL + "/view")
-#         response.raise_for_status()  # Raise an error for HTTP errors
 
-#         # Log the response from the backend
-#         print("Data received from backend:", response.json())
-
-#         return response.json()
-#     except requests.exceptions.RequestException as e:
-#         print(f"Error fetching data: {e}")
-#         return jsonify({'error': str(e)}), 500
-#     except ValueError:
-#         print("Invalid JSON response from backend")
-#         return jsonify({'error': 'Invalid JSON response from backend'}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
